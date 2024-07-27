@@ -1,0 +1,27 @@
+.gg{
+    font-size: 25px;
+    padding: 5px 25px;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+p{
+    font-size: 13px;
+}
+@media (max-width: 720px){
+    h2{
+        font-size: 15px;
+    }
+
+    p{
+        font-size: 11px;
+    }
+
+   .gg{
+    font-size: 20px;
+   }
+}

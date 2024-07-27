@@ -1,0 +1,77 @@
+<app-nav-bar></app-nav-bar>
+<form class="form" [formGroup]="form1">
+    <p class="title">Register </p>
+    <p class="message">Signup now and get full access to our app. </p>
+        <div class="flex">
+        <label>
+            <input class="input" formControlName="firstName">
+            <span>Firstname</span>
+            <small *ngIf="form1.get('firstName')?.invalid && form1.get('firstName')?.touched">*FirstName is required field.</small>
+        </label>
+
+        <label>
+            <input class="input" type="text" placeholder="" required formControlName="lastName">
+            <span>Lastname</span>
+        </label>
+    </div>  
+            
+    <label>
+        <label style=" color: rgba(88, 87, 87, 0.822);">Select A College</label>
+        <select class="input" formControlName="college" >
+            <option *ngFor="let item of college">{{ item }}</option>
+            <small *ngIf="form1.get('college')?.invalid && form1.get('college')?.touched">*Select a College.</small>
+        </select>
+    </label>  
+        
+    <label>
+        <input class="input" type="tel" placeholder="" required formControlName="contactNumber">
+        <span>Contact Number</span>
+        <small *ngIf="form1.get('contactNumber')?.invalid && form1.get('contactNumber')?.touched">*Contact Number is Required.</small>
+    </label>
+
+    <div class="container">
+        <label style="  color: grey;
+        font-size: 0.9em;">Select A Gender</label>
+        <label>
+            <input type="radio" name="gender" formControlName="gender" value="male">
+            <span>Male</span>
+        </label>
+        <label>
+            <input type="radio" name="gender" formControlName="gender" value="female">
+            <span>Female</span>
+        </label>
+        <label>
+            <input type="radio" name="gender" formControlName="gender" value="other">
+            <span>Other</span>
+        </label>
+
+    </div>
+
+    <label>
+        <input class="input" type="text" placeholder="" required="" formControlName="highSchool">
+        <span>Enter Your High School</span>
+        <small *ngIf="form1.get('highSchool')?.invalid && form1.get('highSchool')?.touched">*High School is Required.</small>
+    </label>
+
+    <label>
+        <label style=" color: rgba(88, 87, 87, 0.822);">Enter a Graduate Year</label>
+        <select class="input" name="" id="" formControlName="graduateYear">
+            <option *ngFor="let item of year">{{ item }}</option>
+            <small *ngIf="form1.get('graduateYear')?.invalid && form1.get('graduateYear')?.touched">*Graduate Year is Required.</small>
+        </select>
+    </label> 
+
+
+    <label>
+        <span style=" color: rgba(88, 87, 87, 0.822);">Select a Course</span>
+        <select formControlName="course" class="input" name="" id="">
+            <option *ngFor="let item of course">{{ item }}</option>   
+            <small *ngIf="form1.get('course')?.invalid && form1.get('course')?.touched">*Course is Required.</small>
+        </select>
+    </label> 
+
+    <button class="btn btn-primary" type="submit" (click)="onSave1()" [disabled]="form1.invalid">Submit</button>
+   
+</form>
+
+<app-footer></app-footer>

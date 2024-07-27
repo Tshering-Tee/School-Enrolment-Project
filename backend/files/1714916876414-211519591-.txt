@@ -1,0 +1,4 @@
+"Name": "Tshering Tashi",
+"emial": "dorjitashi113@gamil.com",
+"college": "Yoezerling Higher Secondary School",
+"contact": 17935640,

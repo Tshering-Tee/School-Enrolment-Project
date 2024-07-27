@@ -1,0 +1,23 @@
+
+<form class="form" [formGroup]="form">
+    <p class="form-title">Join Our Team</p>
+
+    <div class="input-container">
+      <input type="email" placeholder="Enter a Name" formControlName="Name">
+      <small *ngIf="form.get('Name')?.invalid && form.get('Name')?.touched">*Name is required field.</small>
+  </div>
+
+     <div class="input-container">
+       <input type="email" placeholder="Enter email" formControlName="email">
+       <small *ngIf="form.get('email')?.invalid && form.get('email')?.touched">*Email is required field.</small>
+   </div>
+   <div class="input-container">
+       <input type="password" placeholder="Enter password" formControlName="password">
+       <small *ngIf="form.get('password')?.invalid && form.get('password')?.touched">*Password is required field.</small>
+     </div>
+      <button routerLink="display-member" type="submit" class="submit"  [disabled]="!form.valid" (click)="onSave()">
+     Submit
+   </button>
+</form>   
+
+

@@ -1,0 +1,33 @@
+<app-nav-bar></app-nav-bar>
+<h1 class="text-center fs-1 py-5"><b>College List</b></h1>
+<hr>
+<div class="container">
+    <div class="row">
+        @for (item of collegelist; track $index) {
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body d-flex justify-content-between align-items-start">
+                        <h5 class="card-title mb-0">Student Information</h5>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="text-center"><b>{{item?.college}}</b></h1>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Name:</strong> {{ item?.firstName }} {{ item?.lastName }}</li>
+                            <li class="list-group-item"><strong>Contact Number:</strong> {{ item?.contactNumber }}</li>
+                            <li class="list-group-item"><strong>Gender:</strong> {{ item?.gender }}</li>
+                            <li class="list-group-item"><strong>High School:</strong> {{ item?.highSchool }}</li>
+                            <li class="list-group-item"><strong>Graduate Year:</strong> {{ item?.graduateYear }}</li>
+                            <li class="list-group-item"><strong>Course:</strong> {{ item?.course }}</li>
+                        </ul>
+                        <div class="mt-3 d-flex justify-content-between">
+                            <button class="btn btn-danger" (click)="onDelete(item.id)">Delete</button>
+                            <button class="btn btn-primary" (click)="onEdit(item.id)">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<app-footer></app-footer>

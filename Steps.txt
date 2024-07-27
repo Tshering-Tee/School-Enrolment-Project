@@ -1,0 +1,20 @@
+	NESTJS
+1.Download Prisma (npm install @prisma/client)
+2.Initialize Prisma (npx primsma init)
+3.Do proccess on schema and env
+4.npx prisma generate 
+5.npx prisma db push
+6.Install Swagger
+7.Install class-validator
+8.Make Prisma-Service and Prisma-Module file.
+8.Make a request and response file.
+9.Create Controller file.
+10.Create Api exception and apiModule
+11.Create Cors in main.ts.
+12. Install Config(npm i @nestjs/config)
+13.Import in AppModule.
+	
+	ANGULAR
+15.Import HttpClientModule in Angular.
+14.Create Connection in angular Typescript
+15.Create Environment file

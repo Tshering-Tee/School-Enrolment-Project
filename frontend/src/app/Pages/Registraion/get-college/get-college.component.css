@@ -1,0 +1,7 @@
+.text-center{
+    text-decoration: none;
+}
+
+.text-center:hover{
+    cursor: pointer;
+}

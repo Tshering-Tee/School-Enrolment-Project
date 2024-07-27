@@ -1,0 +1,39 @@
+.event-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .event-img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .event-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .event-header h3 {
+    margin: 0;
+  }
+  .event-body {
+    padding: 20px;
+  }
+  .event-footer {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+  }
+  .btn-primary-custom {
+    background-color: #0056b3;
+    border: none;
+  }
+  .btn-primary-custom:hover {
+    background-color: #004494;
+  }

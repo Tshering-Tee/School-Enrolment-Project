@@ -1,0 +1,28 @@
+<h1 class="text-center fs-1 py-5"><b>OUR MEMBER</b></h1>
+   <hr>
+   <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <h2>Name</h2>
+            <hr>
+            @for (item of memberlist; track $index) {
+                <i class="fa-solid fa-user py-4" style="font-size: 20px;"></i><p class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 " style="display: inline;"> {{item?.Name}}</p><hr>
+            }
+          </div>
+          <div class="col">
+            <h2>Email</h2>
+            <hr>
+            @for (item of memberlist; track $index) {
+                <p class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 "> {{item?.email}}</p><hr>
+            }
+          </div>
+          <div class="col">
+            <h2>Password</h2>
+            <hr>
+            @for (item of memberlist; track $index) {
+                <p class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 "> {{item?.password}}</p><hr>
+            }
+          </div>
+        </div>
+      </div>
+
